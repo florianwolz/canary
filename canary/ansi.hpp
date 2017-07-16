@@ -91,10 +91,8 @@ namespace Ansi {
         template<unsigned Code, unsigned... Codes>
         struct CodeList<Code, Codes...> {
             using Type = Concatenate<
-                Concatenate<
-                    ToCompileTimeString<Code>,
-                    CompileTimeString<';'>
-                >,
+                ToCompileTimeString<Code>,
+                CompileTimeString<';'>,
                 typename CodeList<Codes...>::Type
             >;
         };
