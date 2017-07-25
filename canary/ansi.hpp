@@ -222,6 +222,9 @@ namespace Ansi {
 
                     // TODO: test if this is secure and add a state machine
                 }
+               
+                // Free memory of the opaque pointer
+                delete out;
             }
 
             void CancelReset() {
