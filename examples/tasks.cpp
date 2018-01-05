@@ -2,7 +2,7 @@
 #include <chrono>
 #include <thread>
 
-#include "../canary.hpp"
+#include "canary.hpp"
 
 struct Task {
     std::string emoji;
